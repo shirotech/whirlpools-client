@@ -2,7 +2,7 @@
 name = "whirlpools-client"
 version = "0.2.0"
 description = "Created with Anchor"
-edition = "2018"
+edition = "2024"
 
 [lib]
 crate-type = ["cdylib", "lib"]
@@ -15,20 +15,20 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-anchor-lang = "0.29"
-anchor-spl = "0.29"
-spl-token = {version = "3.3", features = ["no-entrypoint"]}
-solana-program = "~1.17.0"
-thiserror = "1.0"
-uint = {version = "0.9.1", default-features = false}
-borsh = "0.10.3"
-bytemuck = { version = "1.7.2" }
+anchor-lang = { git = "https://github.com/coral-xyz/anchor", package = "anchor-lang", branch = "master" }
+anchor-spl = { git = "https://github.com/coral-xyz/anchor", package = "anchor-spl", branch = "master" }
+spl-token = { version = "7.0", features = ["no-entrypoint"] }
+solana-program = "2.1"
+thiserror = "2.0"
+uint = { version = "0.9", default-features = false }
+borsh = "1.5"
+bytemuck = { version = "1.21" }
 
 [dev-dependencies]
 proptest = "1.0"
-serde = "1.0.117"
-serde_json = "1.0.59"
+serde = "1.0"
+serde_json = "1.0"
 
 [dev-dependencies.serde_with]
-version = "1.12.0"
+version = "3.12"
 features = ["json"]
